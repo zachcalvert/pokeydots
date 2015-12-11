@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	Welcome, {{ user.username }}
+
+	<h4>Favorite Spots</h4>
+	<ul>
+		{% for spot in user.favorite_spots.all %}
+			<li>{{ spot.name }}</li>
+		{% endfor %}
+	</ul>
+	
+{% endblock %}
